@@ -57,7 +57,7 @@ func (s *Subscriber) Subscribe(broker *Broker) {
 	s.broker = broker
 }
 
-// Read returns all unread messages and moves the position to the end.
+// Read returns all the unread messages and moves the position to the end.
 func (s *Subscriber) Read() ([]string, error) {
 	if s.broker == nil {
 		return nil, ErrNotSubscribed
